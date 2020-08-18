@@ -1,0 +1,42 @@
+//解决了关闭窗口的问题
+
+
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+//panel 可以看成是一个空间，不能单独存在,把panel放在frame里面
+public class TestPanel {
+    public static void main(String[] args) {
+        Frame frame = new Frame();
+        //布局的概念
+        Panel panel = new Panel();
+
+        // frame 设置
+
+        frame.setLayout(null);
+        frame.setBounds(300,300,500,500);
+        frame.setBackground(new Color(45, 199, 48));
+
+        //panel 设置
+        panel.setBounds(50,50,400,400);
+        panel.setBackground(new Color(50, 180, 135));
+
+        frame.add(panel);//add()里面放component
+        frame.setVisible(true);
+
+        //监听窗口关闭事件 system。exit（0）
+        //适配器模式：
+        frame.addWindowListener(new WindowAdapter() {
+            // 窗口点击关闭需要做的事情
+            public void windowClosing(WindowEvent e) {
+                //结束程序
+                System.exit(0);
+            }
+        });
+
+
+
+    }
+}
