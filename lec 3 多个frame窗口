@@ -1,0 +1,33 @@
+package lesson_1;
+
+//同时弹出多个frame 窗口
+
+import java.awt.Color;
+import java.awt.Frame;
+
+public class Testframe2 {
+	public static void main(String[] args) {
+		MyFrame myFrame1 = new MyFrame(100,100,200,200,Color.blue);
+		MyFrame myFrame2 = new MyFrame(300,100,200,200,Color.yellow);
+		MyFrame myFrame3 = new MyFrame(100,300,200,200,Color.red);
+		MyFrame myFrame4 = new MyFrame(300,300,200,200,Color.magenta);
+	}
+
+}
+
+class MyFrame extends Frame{
+//Frame 是一个awt包里面自己含有的class，继承它
+
+	static int id = 0;
+	// set 可能 存在多个窗口，我们需要一个counter
+	
+	public MyFrame(int x, int y, int w, int h,Color color) {
+  //创建一个overloaded constructor
+  
+		super("MyFrame+"+(++id));
+		setBackground(color);
+		setBounds(x,y,w,h);
+		setVisible(true);
+	}
+	
+}
