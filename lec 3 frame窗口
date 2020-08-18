@@ -1,0 +1,30 @@
+package lesson_1;
+
+import java.awt.*;
+
+
+// frame 创建完成后 会弹出一个窗口，但是无法关闭
+
+public class TestFrame {
+	public static void main(String[] args) {
+  
+		//frame 对象 title
+		 Frame frame = new Frame("我的第一个java图像界面窗口");
+		 
+		 frame.setVisible(true);
+		 
+		 frame.setSize(400,400);
+		 // setSize(width,height)
+		 
+		 frame.setBackground(new Color(1,1,1));
+		 //set background color
+		 
+		 // set 弹窗的初始位置（point）
+		 frame.setLocation(200,200);
+		 
+		 // set 设置大小固定
+		 frame.setResizable(false);
+
+	}
+
+}
