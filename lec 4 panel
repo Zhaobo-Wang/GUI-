@@ -16,6 +16,12 @@ public class TestPanel {
         // frame 设置
 
         frame.setLayout(null);
+        
+        // 布局管理器
+        //流式布局
+        //东西南北中布局
+        //表格式布局
+
         frame.setBounds(300,300,500,500);
         frame.setBackground(new Color(45, 199, 48));
 
